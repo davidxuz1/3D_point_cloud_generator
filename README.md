@@ -1,4 +1,4 @@
-# 3D Face Reconstruction Project
+# 3D Face Model Generator
 
 Este proyecto contiene varios scripts de Python para la reconstrucción y visualización en 3D de rostros a partir de imágenes procesadas. Se utilizan diferentes técnicas y herramientas, incluyendo MediaPipe y métodos tradicionales de Visión por Computador.
 
