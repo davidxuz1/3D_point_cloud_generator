@@ -38,7 +38,7 @@ Cada script generará salidas específicas que podrás visualizar o utilizar par
 ## Requisitos
 
 - Python 3.11
-- Bibliotecas: OpenCV, MediaPipe, NumPy, PyVista, Matplotlib, PyVista, PlyFile.
+- Bibliotecas: OpenCV, MediaPipe, NumPy, PyVista, Matplotlib, PlyFile.
 
 
 
