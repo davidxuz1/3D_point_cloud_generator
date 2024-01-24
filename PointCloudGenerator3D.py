@@ -8,11 +8,14 @@ from preprocessing import Preprocessor
 ###################################################################################################################################################
 
 
-# Inicializa y procesa el video para obtener los frames.
-preprocessor = Preprocessor(video_dir='./raw_video', video_name='test.mp4')  # Nombre del video a procesar.
-processed_dir = preprocessor.process_video()
-print(f"Las imágenes procesadas se guardan en: {processed_dir}")
+# # Inicializa y procesa el video para obtener los frames.
+# preprocessor = Preprocessor(video_dir='./raw_video', video_name='test_david.mp4')  # Nombre del video a procesar.
+# processed_dir, original_image_dir = preprocessor.process_video()
+# print(f"Las imágenes procesadas se guardan en: {processed_dir}")
 
+# Si las imágenes procesadas ya están creadas, comentar lo de arriba y decomentar las dos líneas de abajo. Cambiando "test_vladys" por ""test_dani" u otro se puede ver la cara de otros.
+processed_dir = "./extracted_frames/test_vladys/processed"
+original_image_dir = "./extracted_frames/test_vladys"
 # --- Parámetros de la Cámara (iPhone 13 mini) ---
 """
 focal_length_mm = 26  # Longitud focal en mm 26
@@ -28,5 +31,5 @@ K = np.array([[1.97491666e+03, 0.00000000e+00, 3.15881152e+02],
               [0.00000000e+00, 0.00000000e+00, 1.00000000e+00]])
 
 # Crea una instancia de PointCloudReconstructor y procesa las imágenes. Retornar nube de puntos, guardar en un archivo .ply y mallado del rostro.
-reconstructor = PointCloudReconstructor(processed_dir, K)
+reconstructor = PointCloudReconstructor(processed_dir, original_image_dir, K)
 reconstructor.process_images()
