@@ -42,7 +42,7 @@ class Preprocessor:
             if image_name.endswith('.png'):
                 self.background_remover.process_image(image_name)
 
-        return self.image_processor.output_folder
+        return self.image_processor.output_folder, self.input_dir_for_processor
 
 """
 preprocessor = Preprocessor(video_dir='./raw_video', video_name='test.mp4') # Name of the video to preprocess
